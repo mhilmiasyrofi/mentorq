@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseAuth.*
+import com.mentorq.activity.WelcomeActivity
 import org.jetbrains.anko.startActivity
 
 class SplashScreenActivity : AppCompatActivity() {
@@ -12,7 +13,7 @@ class SplashScreenActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         if (FirebaseAuth.getInstance().currentUser == null)
-            startActivity<MainActivity>()
+            startActivity<WelcomeActivity>()
         else
             startActivity<MainActivity>()
         finish()
