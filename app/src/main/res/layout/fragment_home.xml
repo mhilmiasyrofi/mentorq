@@ -1,14 +1,180 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".fragment.HomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment" />
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="Chat dengan Mentor"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
-</FrameLayout>
+    <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_konsultasi"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mtrl_card_height"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="@dimen/mtrl_card_spacing"
+            android:layout_marginRight="@dimen/mtrl_card_spacing"
+            app:layout_constraintTop_toBottomOf="@id/title">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+            <ImageView
+                    android:layout_width="@dimen/mtrl_card_icon"
+                    android:layout_height="@dimen/mtrl_card_icon"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_konsultasi"/>
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:maxLines="1"
+                        android:text="@string/konsultasi_title"
+                        android:textSize="18sp"
+                        android:textStyle="bold"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="@string/konsultasi_desc"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_weakness"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mtrl_card_height"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="@dimen/mtrl_card_spacing"
+            android:layout_marginRight="@dimen/mtrl_card_spacing"
+            app:layout_constraintTop_toBottomOf="@id/card_konsultasi">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+            <ImageView
+                    android:layout_width="@dimen/mtrl_card_icon"
+                    android:layout_height="@dimen/mtrl_card_icon"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_weakness"/>
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:maxLines="1"
+                        android:text="@string/weakness_title"
+                        android:textSize="18sp"
+                        android:textStyle="bold"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="@string/weakness_desc"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_advance"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mtrl_card_height"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="@dimen/mtrl_card_spacing"
+            android:layout_marginRight="@dimen/mtrl_card_spacing"
+            app:layout_constraintTop_toBottomOf="@id/card_weakness">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+            <ImageView
+                    android:layout_width="@dimen/mtrl_card_icon"
+                    android:layout_height="@dimen/mtrl_card_icon"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_advance"/>
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:maxLines="1"
+                        android:text="@string/advance_title"
+                        android:textSize="18sp"
+                        android:textStyle="bold"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="@string/advance_desc"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,12 +1,11 @@
-package com.mentorq
+package com.mentorq.activity
 
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
-import android.widget.TextView
-import androidx.appcompat.app.ActionBar
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
+import com.mentorq.R
 import com.mentorq.fragment.HomeFragment
 import com.mentorq.fragment.OrderFragment
 import com.mentorq.fragment.ProfileFragment
@@ -22,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
     private val onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
-            R.id.navigation_profile-> {
+            R.id.navigation_profile -> {
                 fragmentManager.beginTransaction().hide(activeFragment).show(profileFragment).commit()
                 activeFragment = profileFragment
                 return@OnNavigationItemSelectedListener true

@@ -1,10 +1,8 @@
-package com.mentorq
+package com.mentorq.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseAuth.*
-import com.mentorq.activity.WelcomeActivity
 import org.jetbrains.anko.startActivity
 
 class SplashScreenActivity : AppCompatActivity() {
